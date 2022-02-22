@@ -3,7 +3,7 @@ import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 
 function App() {
-  alert(process.env.PUBLIC_URL);
+  alert("1" + process.env.PUBLIC_URL);
   return (
     <Router>
       <Routes basename={process.env.PUBLIC_URL}>
