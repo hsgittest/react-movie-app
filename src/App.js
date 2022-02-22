@@ -3,20 +3,17 @@ import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 
 function App() {
+  alert(process.env.PUBLIC_URL);
   return (
     <Router>
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route
           // path={process.env.PUBLIC_URL + "/movie/:id"}
-          basename={process.env.PUBLIC_URL}
+
           path="/movie/:id"
           element={<Detail />}
         ></Route>
-        <Route
-          basename={process.env.PUBLIC_URL}
-          path="/"
-          element={<Home />}
-        ></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
     </Router>
   );
